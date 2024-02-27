@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Contact Page */
+
+.mail-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale-animation:hover .mail-icon {
+  transform: scale(1.2);
+}
+
+.contact-input {
+  background-color: white;
+  color: black;
+
+  outline: none;
+
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+
+  width: 100%;
+}
+
+/* Skills */
+
+.grid-flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.skills-tag {
+  transition: background-color 0.3s linear, opacity 0.5s ease-in-out,
+    height 0.5s ease-in-out;
+}
+
+.skills-tag:hover > .skills-icon {
+  transform: scale(1.2);
+}
+
+.skills-level {
+  opacity: 0;
+  height: 0;
+  font-size: 0.8rem;
+  transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.skills-tag:hover .skills-level {
+  height: 1.1rem;
+  animation: fade-in 500ms forwards;
+  opacity: 1;
+}
+
+/* Overwrite Default Timeline Stylings */
+
+.vertical-timeline {
+  position: relative;
+}
+
+/* Light mode */
+.custom-timeline::before {
+  background: black !important;
+}
+
+/* Dark mode */
+.dark .custom-timeline::before {
+  background: white !important;
+}
+
+.custom-timeline-element .vertical-timeline-element-content {
+  background: rgb(241 245 249) !important;
+  color: #000 !important;
+}
+
+.dark .custom-timeline-element .vertical-timeline-element-content {
+  background: rgb(30 41 59) !important;
+  color: #fff !important;
+}
+
+.vertical-timeline::before {
+  top: 2em !important;
+  height: calc(100% - 3.9em) !important;
+}
+
+.vertical-timeline-element-icon {
+  top: 50% !important;
+  transform: translateY(-50%);
+  left: 0.8rem !important;
+  width: 15px !important;
+  height: 15px !important;
+  background-color: black;
+  box-shadow: 0 1px 0.75em rgb(0, 0, 0, 0.8) !important;
+}
+
+.dark .vertical-timeline-element-icon {
+  background-color: white !important;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    width: 15px !important;
+    height: 15px !important;
+    left: calc(50% + 1.4rem) !important;
+    box-shadow: 2px 3px 0.6em rgb(0, 0, 0, 0.7) !important;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
+    top: 50% !important;
+  }
+}
+
+.vertical-timeline-element-content-arrow {
+  top: 50% !important;
+  border-right-color: rgb(241 245 249) !important;
+}
+
+.dark .vertical-timeline-element-content-arrow {
+  top: 50% !important;
+  border-right-color: rgb(30 41 59) !important;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 0 0 1px rgb(15 23 42 / 0.1), 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.06) !important;
+  background-color: transparent !important;
+}
+
+/* Animation */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
