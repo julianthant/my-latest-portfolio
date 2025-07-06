@@ -46,6 +46,21 @@ const ProjectTimeline = ({}) => {
               {element.tag}
             </p>
           </div>
+          <div className="pt-2">
+            <ul className="space-y-2">
+              {element.description.map((point, index) => (
+                <li
+                  key={index}
+                  className="flex items-center gap-3 text-gray-600 dark:text-gray-300"
+                >
+                  <span className="font-bold text-xl leading-none text-accent-400">
+                    •
+                  </span>
+                  <span className="text-sm leading-relaxed">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </VerticalTimelineElement>
       ))}
     </VerticalTimeline>
