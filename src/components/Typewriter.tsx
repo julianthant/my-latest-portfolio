@@ -1,10 +1,16 @@
-'use client';
+"use client";
 
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export default function Typewriter() {
   const [text] = useTypewriter({
-    words: ['Full Stack Engineer', 'Fitness Enthusiast', 'Badmintonist'],
+    words: [
+      "Full Stack Engineer",
+      "Fitness Enthusiast",
+      "Badmintonist",
+      "Foodie",
+      "Chess Player",
+    ],
     loop: 0,
   });
 
