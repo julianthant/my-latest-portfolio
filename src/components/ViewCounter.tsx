@@ -8,27 +8,44 @@ interface ViewCounterProps {}
 const ViewCounter: FC<ViewCounterProps> = ({}) => {
   const [viewCount, setViewCount] = useState<number>(0);
   const [isClient, setIsClient] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    // Set client flag to true after component mounts
     setIsClient(true);
 
-    const incrementPageViews = () => {
-      // Get current view count from localStorage
-      const currentViews = localStorage.getItem("portfolio-page-views");
-      const newViewCount = currentViews ? parseInt(currentViews) + 1 : 1;
+    const incrementPageViews = async () => {
+      try {
+        // First, increment the page view
+        const response = await fetch("/api/page-views", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
 
-      // Update localStorage
-      localStorage.setItem("portfolio-page-views", newViewCount.toString());
-
-      // Update state
-      setViewCount(newViewCount);
+        if (response.ok) {
+          const data = await response.json();
+          setViewCount(data.views);
+        } else {
+          // Fallback: try to get current count without incrementing
+          const getResponse = await fetch("/api/page-views");
+          if (getResponse.ok) {
+            const data = await getResponse.json();
+            setViewCount(data.views);
+          }
+        }
+      } catch {
+        // Fallback to 0 if API fails
+        setViewCount(0);
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     // Small delay to ensure component is mounted
     const timer = setTimeout(() => {
       incrementPageViews();
-    }, 100);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -53,10 +70,18 @@ const ViewCounter: FC<ViewCounterProps> = ({}) => {
       <span
         className={`text-sm text-gray-600 dark:text-gray-300 ${dm_sans.className}`}
       >
-        <span className="font-medium text-accent-400">
-          {formatViewCount(viewCount)}
-        </span>{" "}
-        page views
+        {isLoading ? (
+          <>
+            <span className="font-medium text-accent-400">Loading...</span>
+          </>
+        ) : (
+          <>
+            <span className="font-medium text-accent-400">
+              {formatViewCount(viewCount)}
+            </span>{" "}
+            page views
+          </>
+        )}
       </span>
     </div>
   );
