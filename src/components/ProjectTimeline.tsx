@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import timelineElements from '@/data/TimelineElements';
+import timelineElements from "@/data/TimelineElements";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 const ProjectTimeline = ({}) => {
   return (
@@ -20,7 +20,7 @@ const ProjectTimeline = ({}) => {
         <VerticalTimelineElement
           visible={true}
           key={element.id}
-          contentStyle={{ borderRadius: '10px' }}
+          contentStyle={{ borderRadius: "10px" }}
           className="custom-timeline-element"
         >
           <Image
@@ -31,14 +31,18 @@ const ProjectTimeline = ({}) => {
             height={450}
             priority={true}
           />
-          <a className="text-4xl font-bold max-sm:text-3xl" href={element.url}>
+          <a
+            target="_blank"
+            className="font-bold max-sm:text-3xl text-4xl"
+            href={element.url}
+          >
             {element.title}
           </a>
           <div className="flex items-center gap-8 pb-4">
-            <p className="rounded-full px-5 py-1 font-bold bg-accent-400 text-black dark:text-white">
-              {element.date}
+            <p className="px-5 py-1 rounded-full font-bold text-black dark:text-white bg-accent-400">
+              {element.year}
             </p>
-            <p className="text-lg text-slate-500 dark:text-slate-400">
+            <p className="text-slate-500 dark:text-slate-400 text-lg">
               {element.tag}
             </p>
           </div>
