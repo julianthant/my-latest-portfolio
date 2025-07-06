@@ -9,6 +9,7 @@ import { SelectDayNight } from "./ToggleDayNight";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/blog/" },
+  { name: "Projects", href: "/blog/projects/" },
   { name: "Contact Me", href: "/contact/" },
 ];
 
