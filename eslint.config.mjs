@@ -15,7 +15,6 @@ export default [
       // Relaxed rules for better development experience
       indent: ["error", 2],
       semi: ["error", "always"],
-      "comma-dangle": ["error", "always-multiline"],
 
       // Allow snake_case for imported component names
       camelcase: "off",
@@ -27,7 +26,7 @@ export default [
       // Allow arrow functions with block statements
       "arrow-body-style": "off",
 
-      // More specific comma-dangle rule
+      // Specific comma-dangle rule - no trailing commas in imports
       "comma-dangle": [
         "error",
         {
