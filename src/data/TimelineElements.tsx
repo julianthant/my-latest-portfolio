@@ -123,7 +123,7 @@ let timelineElements = [
       "Next-themes for dark/light mode toggle",
       "React Simple Typewriter for animated text",
       "React Vertical Timeline for project showcase",
-      "ESLint with Next.js configuration",
+      "Vercel Blob for page views tracking",
     ],
   },
 ];
