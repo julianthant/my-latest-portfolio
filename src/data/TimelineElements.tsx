@@ -1,4 +1,4 @@
-import MyPortfolioWebsite from "@/assets/my-portfolio.png";
+import CurrentPortfolio from "@/assets/current-portfolio.png";
 import CoffeeWebsite from "@/assets/coffee-website.png";
 import ToDoListWebsite from "@/assets/todolist-website.png";
 import CarShowroom from "@/assets/dad-showroom.png";
@@ -111,11 +111,11 @@ let timelineElements = [
   },
   {
     id: 7,
-    title: "Latest Portfolio Website",
+    title: "Current Portfolio",
     url: "https://julianzaw.tech",
     year: "2025",
     tag: "Portfolio",
-    image: MyPortfolioWebsite,
+    image: CurrentPortfolio,
     description: [
       "Next.js 15 with latest React 19",
       "TypeScript for type safety",
