@@ -29,6 +29,9 @@ export default function Navbar() {
                   <Link href="/blog/">About</Link>
                 </li>
                 <li className="flex font-bold text-base hover:text-accent-350 cursor-pointer">
+                  <Link href="blog/projects">Projects</Link>
+                </li>
+                <li className="flex font-bold text-base hover:text-accent-350 cursor-pointer">
                   <Link href="/contact/">Contact Me</Link>
                 </li>
               </ul>
