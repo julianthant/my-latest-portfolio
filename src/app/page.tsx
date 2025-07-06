@@ -1,20 +1,20 @@
-import Image from 'next/image';
-import HeadingImage from '@/assets/main-img.webp';
-import Typewriter from '@/components/Typewriter';
-import { dm_sans } from '@/library/fonts';
+import Image from "next/image";
+import HeadingImage from "@/assets/main-img.webp";
+import Typewriter from "@/components/Typewriter";
+import { dm_sans } from "@/library/fonts";
 import {
   Facebook_Link,
   Instagram_Link,
   Linkedin_Link,
-} from '@/components/SocialIcons';
+} from "@/components/SocialIcons";
 
 const page = () => {
   return (
-    <section className="flex items-center justify-center pt-[61px] container px-8 min-h-svh">
+    <section className="flex justify-center items-center px-8 pt-[61px] min-h-svh container">
       <div className="flex gap-x-24">
         <div className="max-newXL:hidden">
           <ul
-            className="flex flex-col h-full justify-center gap-8"
+            className="flex flex-col justify-center gap-8 h-full"
             role="list"
             aria-label="social-links"
           >
@@ -23,11 +23,11 @@ const page = () => {
             <Linkedin_Link />
           </ul>
         </div>
-        <div className="md:grid-flow-col md:m-auto grid place-items-center md:gap-x-16 max-md:gap-y-8">
+        <div className="place-items-center max-md:gap-y-8 md:gap-x-16 grid md:grid-flow-col md:m-auto">
           <div>
-            <div className="font-bold max-w-[24.6rem]">
+            <div className="max-w-[24.6rem] font-bold">
               <h1 className="text-[2.75rem]">
-                Hi, I&apos;m <span className="text-accent-400">Julian</span>{' '}
+                Hi, I&apos;m <span className="text-accent-400">Julian</span>{" "}
                 <br />
               </h1>
               <Typewriter />
@@ -35,22 +35,15 @@ const page = () => {
             <p
               className={`pt-3 pb-6 ${dm_sans.className} text-slate-500 dark:text-slate-400`}
             >
-              Hello World! I am Julian, an ambitious junior developer who is
-              looking for opportunities to learn more. I have a wide skill-set,
-              but yet to master most of them. If you have any opportunities for
-              me to refine and improve my current skill-set, please feel free to
-              contact me.
+              Hello, I'm Julian, a Full-Stack Web Developer specializing in
+              building dynamic applications with React and Node.js. My expertise
+              includes creating robust RESTful APIs, managing databases like
+              MongoDB and PostgreSQL, and deploying full-scale projects. I am a
+              collaborative developer passionate about writing clean, efficient
+              code.
             </p>
-            <a href="https://postimg.cc/Z0BVcwmb" target="_blank">
-              <button
-                aria-label="resume button"
-                className={`bg-accent-400 px-5 py-[0.4rem] font-bold text-base text-black dark:text-white hover:opacity-70 rounded-md ${dm_sans.className}`}
-              >
-                Download Resume
-              </button>
-            </a>
           </div>
-          <div className="flex items-center justify-end max-md:-order-1 w-[35rem] max-xl:w-[28rem] max-lg:w-[24rem] max-md:w-auto">
+          <div className="flex justify-end items-center max-md:-order-1 w-[35rem] max-md:w-auto max-lg:w-[24rem] max-xl:w-[28rem]">
             <Image
               src={HeadingImage}
               height={225}
