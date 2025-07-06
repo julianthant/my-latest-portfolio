@@ -5,11 +5,12 @@ import CarShowroom from "@/assets/dad-showroom.png";
 import SoleSteals from "@/assets/shoe-website.webp";
 import Yaps from "@/assets/yaps-website.webp";
 import StyleZ from "@/assets/stylez-store.png";
+import TwisterCambodia from "@/assets/twistercambodia.png";
 
 let timelineElements = [
   {
     id: 1,
-    title: "Coffee Website",
+    title: "Barista Chaw Su - Coffee Recipe Website",
     url: "https://baristachawsu.netlify.app",
     year: "2023",
     tag: "Educational",
@@ -24,7 +25,7 @@ let timelineElements = [
   },
   {
     id: 2,
-    title: "Car Showroom Website",
+    title: "Style Nation - Car Showroom Website",
     url: "https://stylenation.netlify.app",
     year: "2023",
     tag: "Business",
@@ -38,7 +39,7 @@ let timelineElements = [
   },
   {
     id: 3,
-    title: "To Do List",
+    title: "Todoer - To Do List",
     url: "https://todolist-juju.netlify.app",
     year: "2023",
     tag: "Utility",
@@ -54,7 +55,7 @@ let timelineElements = [
   },
   {
     id: 4,
-    title: "Online Shoe Store",
+    title: "SoleSteals -Online Shoe Store",
     url: "https://solesteals.netlify.app",
     year: "2023",
     tag: "E-Commerce",
@@ -71,7 +72,7 @@ let timelineElements = [
   },
   {
     id: 5,
-    title: "Real-Time Chat Application",
+    title: "Yaps - Real-Time Chat Application",
     url: "https://yaps-social.vercel.app",
     year: "2024",
     tag: "Social",
@@ -91,7 +92,7 @@ let timelineElements = [
   },
   {
     id: 6,
-    title: "Online Clothing Store",
+    title: "StyleZ - Online Clothing Store",
     url: "https://stylez.julianzaw.tech",
     year: "2024",
     tag: "E-Commerce",
@@ -111,6 +112,28 @@ let timelineElements = [
   },
   {
     id: 7,
+    title: "Twister - Enterprise Management System",
+    url: "https://dev.twistercambodia.com",
+    year: "2024 - 2025",
+    tag: "Enterprise",
+    image: TwisterCambodia,
+    description: [
+      "React 18 with TypeScript and Vite for fast development",
+      "TanStack Router for type-safe client-side routing",
+      "TanStack Query for server state management",
+      "TanStack Table for advanced data grid functionality",
+      "Java Spring Boot microservices with RESTful APIs",
+      "PostgreSQL with Flyway database migrations",
+      "Keycloak OAuth2/OIDC enterprise authentication",
+      "MinIO S3-compatible object storage service",
+      "GitHub Actions CI/CD with automated testing",
+      "Docker multi-stage builds with GitHub Container Registry",
+      "Docker Compose service orchestration and networking",
+      "Digital Ocean cloud infrastructure deployment",
+    ],
+  },
+  {
+    id: 8,
     title: "Current Portfolio",
     url: "https://julianzaw.tech",
     year: "2025",
