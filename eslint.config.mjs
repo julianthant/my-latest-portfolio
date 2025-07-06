@@ -1,6 +1,40 @@
-import config from 'eslint-config-xo';
-import {defineConfig} from 'eslint/config';
+import { FlatCompat } from "@eslint/eslintrc";
 
-export default defineConfig([
-	config,
-]);
+const compat = new FlatCompat({
+  baseDirectory: import.meta.url,
+});
+
+export default [
+  ...compat.extends("next/core-web-vitals"),
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    rules: {
+      // Relaxed rules for better development experience
+      quotes: ["error", "double"],
+      indent: ["error", 2],
+      semi: ["error", "always"],
+      "comma-dangle": ["error", "always-multiline"],
+
+      // Allow snake_case for imported component names
+      camelcase: "off",
+
+      // Allow unused variables starting with underscore
+      "no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
+
+      // Allow arrow functions with block statements
+      "arrow-body-style": "off",
+
+      // Allow object destructuring with spaces
+      "object-curly-spacing": ["error", "always"],
+
+      // Allow console statements (warn instead of error)
+      "no-console": "warn",
+    },
+  },
+];
