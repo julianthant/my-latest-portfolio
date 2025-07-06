@@ -4,7 +4,7 @@ import {
   Github_Logo,
   Linkedin_Logo,
   Discord_Logo,
-} from '@/components/svgs';
+} from "@/components/svgs";
 
 export const Github_Link = () => (
   <li>
@@ -14,7 +14,7 @@ export const Github_Link = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <Github_Logo className="hover:opacity-60 cursor-pointer dark:fill-white" />
+      <Github_Logo className="hover:opacity-60 dark:fill-white cursor-pointer" />
     </a>
   </li>
 );
@@ -23,11 +23,11 @@ export const Linkedin_Link = () => (
   <li>
     <a
       aria-label="linkedin"
-      href="https://www.linkedin.com/in/julian-hein-0a1504289/"
+      href="https://www.linkedin.com/in/heinthantzaw"
       target="_blank"
       rel="noreferrer"
     >
-      <Linkedin_Logo className="hover:opacity-60 cursor-pointer dark:fill-white" />
+      <Linkedin_Logo className="hover:opacity-60 dark:fill-white cursor-pointer" />
     </a>
   </li>
 );
@@ -36,11 +36,11 @@ export const Instagram_Link = () => (
   <li>
     <a
       aria-label="instagram"
-      href="https://instagram.com/disis_julian?igshid=OGQ5ZDc2ODk2ZA=="
+      href="https://www.instagram.com/juliann_zaw/"
       target="_blank"
       rel="noreferrer"
     >
-      <IG_Logo className="hover:opacity-60 cursor-pointer dark:fill-white" />
+      <IG_Logo className="hover:opacity-60 dark:fill-white cursor-pointer" />
     </a>
   </li>
 );
@@ -53,7 +53,7 @@ export const Discord_Link = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <Discord_Logo className="hover:opacity-60 cursor-pointer dark:fill-white" />
+      <Discord_Logo className="hover:opacity-60 dark:fill-white cursor-pointer" />
     </a>
   </li>
 );
@@ -66,7 +66,7 @@ export const Facebook_Link = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <FB_Logo className="hover:opacity-60 cursor-pointer dark:fill-white" />
+      <FB_Logo className="hover:opacity-60 dark:fill-white cursor-pointer" />
     </a>
   </li>
 );
