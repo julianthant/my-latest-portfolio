@@ -170,7 +170,7 @@ const page: FC<pageProps> = ({}) => {
       </div>
 
       {/* Featured Projects Section */}
-      <div className="flex-grow gap-8 grid grid-flow-row max-statsMD:pt-16">
+      <div className="flex-grow gap-8 grid grid-flow-row">
         <div className="flex flex-col justify-center gap-10 px-8 container">
           <div className="space-y-2 text-center">
             <h2 className="font-bold text-4xl">Featured Projects</h2>
