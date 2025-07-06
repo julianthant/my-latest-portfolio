@@ -1,29 +1,28 @@
-'use client';
+"use client";
 
-import { Menu, Close_Icon } from './svgs';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
-import { SelectDayNight } from './ToggleDayNight';
+import { Menu, Close_Icon } from "./svgs";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import { SelectDayNight } from "./ToggleDayNight";
 
 const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/blog/' },
-  { name: 'Projects', href: '/projects/' },
-  { name: 'Contact Me', href: '/contact/' },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/blog/" },
+  { name: "Contact Me", href: "/contact/" },
 ];
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'unset';
+    document.body.style.overflow = isOpen ? "hidden" : "unset";
   }, [isOpen]);
 
   return (
     <div className="lg:hidden">
       <button
-        className="hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md h-8 w-10 flex items-center justify-center"
+        className="flex justify-center items-center hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md w-10 h-8"
         aria-label="mobile navigation button"
         onClick={() => setIsOpen(true)}
       >
@@ -34,14 +33,14 @@ const MobileNavigation = () => {
         createPortal(
           <>
             <div
-              className="fixed inset-0 bg-black/10 backdrop-blur-sm dark:bg-slate-900/80 z-10"
+              className="z-10 fixed inset-0 bg-black/10 dark:bg-slate-900/80 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             ></div>
-            <nav className="fixed left-auto right-4 top-4 z-20 dark:bg-white bg-slate-900 rounded-lg w-[20rem] shadow-lg text-slate-900 p-6">
+            <nav className="top-4 right-4 left-auto z-20 fixed bg-slate-900 dark:bg-white shadow-lg p-6 rounded-lg w-[20rem] text-slate-900">
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600"
+                className="top-5 right-5 absolute flex justify-center items-center w-8 h-8 text-slate-500 hover:text-slate-600"
               >
                 <Close_Icon />
               </button>
@@ -55,15 +54,15 @@ const MobileNavigation = () => {
                     <Link
                       onClick={() => setIsOpen(false)}
                       href={item.href}
-                      className="font-bold text-base flex hover:text-accent-400 cursor-pointer text-slate-400 dark:text-slate-500"
+                      className="flex font-bold text-slate-400 dark:text-slate-500 text-base hover:text-accent-400 cursor-pointer"
                     >
                       {item.name}
                     </Link>
                   </li>
                 ))}
-                <div className="mt-6 pt-6 border-t border-slate-200">
-                  <div className="flex items-center justify-between">
-                    <p className="dark:text-slate-700 text-slate-500 font-normal">
+                <div className="mt-6 pt-6 border-slate-200 border-t">
+                  <div className="flex justify-between items-center">
+                    <p className="font-normal text-slate-500 dark:text-slate-700">
                       Switch theme
                     </p>
                     <SelectDayNight />
