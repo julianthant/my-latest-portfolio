@@ -10,22 +10,22 @@ export default [
     files: ["**/*.{js,jsx,ts,tsx}"],
     rules: {
       // Disable quotes rule completely to allow both single and double quotes
-      "quotes": "off",
-      
+      quotes: "off",
+
       // Relaxed rules for better development experience
-      "indent": ["error", 2],
-      "semi": ["error", "always"],
+      indent: ["error", 2],
+      semi: ["error", "always"],
       "comma-dangle": ["error", "always-multiline"],
 
       // Allow snake_case for imported component names
-      "camelcase": "off",
+      camelcase: "off",
 
       // Allow unused variables starting with underscore
       "no-unused-vars": [
         "error",
         {
-          "argsIgnorePattern": "^_",
-          "varsIgnorePattern": "^_",
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
         },
       ],
 
