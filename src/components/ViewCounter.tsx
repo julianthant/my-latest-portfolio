@@ -25,13 +25,15 @@ const ViewCounter: FC<ViewCounterProps> = ({}) => {
 
         if (response.ok) {
           const data = await response.json();
-          setViewCount(data.views);
+          setViewCount(data.views || 0);
         } else {
           // Fallback: try to get current count without incrementing
           const getResponse = await fetch("/api/page-views");
           if (getResponse.ok) {
             const data = await getResponse.json();
-            setViewCount(data.views);
+            setViewCount(data.views || 0);
+          } else {
+            setViewCount(0);
           }
         }
       } catch {
