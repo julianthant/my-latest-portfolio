@@ -1,16 +1,14 @@
-import { fetchStats } from '@/helpers/fetchStats';
-import { montserrat, dm_sans } from '@/library/fonts';
-
-interface LeetcodeDashboardProps {}
+import { fetchStats } from "@/helpers/fetchStats";
+import { montserrat, dm_sans } from "@/library/fonts";
 
 const LeetcodeDashboard = async ({}) => {
   const stats = await fetchStats(
-    'https://leetcode-stats-api.herokuapp.com/SoyJuju'
+    "https://leetcode-stats-api.herokuapp.com/SoyJuju"
   );
 
   return (
-    <div className="bg-slate-100 text-black dark:bg-slate-300 py-3 px-3 rounded-lg shadow-lg flex flex-col items-center justify-center gap-6 h-48">
-      <div className="flex items-center justify-center">
+    <div className="flex flex-col justify-center items-center gap-6 bg-slate-100 dark:bg-slate-300 shadow-lg px-3 py-3 rounded-lg h-48 text-black">
+      <div className="flex justify-center items-center">
         <a
           href="https://leetcode.com/SoyJuju/"
           className={`text-base ${montserrat.className}`}
@@ -21,29 +19,29 @@ const LeetcodeDashboard = async ({}) => {
       <div
         className={`flex items-center justify-center text-xl font-bold ${dm_sans.className} text-center 2xl:gap-8 statsMD:gap-5 statsSM:gap-8 max-statsSM:gap-5`}
       >
-        <div className="2xl:gap-8 statsXL:flex statsXL:space-y-0 statsMD:block statsMD:space-y-3 statsMD:gap-5 statsSM:flex statsSM:space-y-0 statsSM:gap-8 max-statsSM:space-y-3">
+        <div className="statsMD:block statsSM:flex statsXL:flex 2xl:gap-8 statsMD:gap-5 statsSM:gap-8 max-statsSM:space-y-3 statsMD:space-y-3 statsSM:space-y-0 statsXL:space-y-0">
           <div>
             <p>
               <span className="text-accent-400">#</span>
               {stats.ranking}
             </p>
-            <p className="text-xs font-medium">Leaderboard Position</p>
+            <p className="font-medium text-xs">Leaderboard Position</p>
           </div>
 
           <div>
             <p>{stats.easySolved}</p>
-            <p className="text-xs font-medium">Easy Solved</p>
+            <p className="font-medium text-xs">Easy Solved</p>
           </div>
         </div>
-        <div className="2xl:gap-8 statsXL:flex statsXL:space-y-0 statsMD:block statsMD:space-y-3 statsMD:gap-5 statsSM:flex statsSM:space-y-0 statsSM:gap-8 max-statsSM:space-y-3">
+        <div className="statsMD:block statsSM:flex statsXL:flex 2xl:gap-8 statsMD:gap-5 statsSM:gap-8 max-statsSM:space-y-3 statsMD:space-y-3 statsSM:space-y-0 statsXL:space-y-0">
           <div>
             <p>{stats.mediumSolved}</p>
-            <p className="text-xs font-medium">Medium Solved</p>
+            <p className="font-medium text-xs">Medium Solved</p>
           </div>
 
           <div>
             <p>{stats.hardSolved}</p>
-            <p className="text-xs font-medium">Hard Solved</p>
+            <p className="font-medium text-xs">Hard Solved</p>
           </div>
         </div>
       </div>
