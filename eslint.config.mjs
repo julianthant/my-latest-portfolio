@@ -1,13 +1,13 @@
 import { FlatCompat } from "@eslint/eslintrc";
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.url,
+  // Use import.meta.dirname for Node.js v20.11.0+, fallback to current approach for older versions
+  baseDirectory: import.meta.dirname || import.meta.url,
 });
 
-export default [
-  ...compat.extends("next/core-web-vitals"),
-  {
-    files: ["**/*.{js,jsx,ts,tsx}"],
+const eslintConfig = [
+  ...compat.config({
+    extends: ["next/core-web-vitals"],
     rules: {
       // Disable quotes rule completely to allow both single and double quotes
       quotes: "off",
@@ -26,17 +26,8 @@ export default [
       // Allow arrow functions with block statements
       "arrow-body-style": "off",
 
-      // Specific comma-dangle rule - no trailing commas in imports
-      "comma-dangle": [
-        "error",
-        {
-          arrays: "always-multiline",
-          objects: "always-multiline",
-          imports: "never",
-          exports: "never",
-          functions: "never",
-        },
-      ],
+      // Completely disable comma-dangle rule to avoid conflicts
+      "comma-dangle": "off",
 
       // Allow object destructuring with spaces
       "object-curly-spacing": ["error", "always"],
@@ -50,5 +41,7 @@ export default [
       // Allow empty interfaces (common in TypeScript React components)
       "@typescript-eslint/no-empty-interface": "off",
     },
-  },
+  }),
 ];
+
+export default eslintConfig;
