@@ -12,28 +12,32 @@ interface pageProps {}
 
 const programmingLanguages = [
   "C++",
-  "Java (Spring Boot)",
+  "Java",
   "Python",
   "Assembly",
   "JavaScript",
   "TypeScript",
   "SQL",
+  "Sass/SCSS",
   "Visual Basic",
 ];
 
 const frameworks = [
   "React",
   "Next.js",
-  "Node.js",
-  "Redux",
+  "Spring Boot",
+  "Astro.js",
   "Tailwind CSS",
-  "Supabase",
   "Prisma ORM",
-  "REST APIs",
-  "JWT",
-  "Webpack",
   "Vite",
-  "OAuth2",
+  "Astro.js",
+  "Framer Motion",
+  "NextAuth.js",
+  "Pusher",
+  "Sentry",
+  "Flyway",
+  "Keycloak",
+  "MinIO",
 ];
 
 const databases = [
@@ -44,7 +48,8 @@ const databases = [
   "MySQL",
   "SQLite",
   "Upstash Redis",
-  "Supabase Database",
+  "Supabase",
+  "Vercel Blob",
 ];
 
 const tools = [
@@ -56,11 +61,12 @@ const tools = [
   "Figma",
   "Slack",
   "Trello",
-  "Notion",
   "Microsoft Teams",
   "Agile",
   "Microsoft Office",
   "Google Suite",
+  "GitHub Actions",
+  "Digital Ocean",
 ];
 
 const page: FC<pageProps> = ({}) => {
