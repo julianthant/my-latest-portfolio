@@ -13,7 +13,7 @@ export default function Navbar() {
             href="/"
             className={`font-bold text-3xl text-accent-400 ${dm_sans.className}`}
           >
-            julianzaw
+            Hein Thant Zaw
           </Link>
 
           <div className="max-lg:hidden flex justify-center items-center gap-6">
@@ -29,7 +29,7 @@ export default function Navbar() {
                   <Link href="/blog/">About</Link>
                 </li>
                 <li className="flex font-bold text-base hover:text-accent-350 cursor-pointer">
-                  <Link href="blog/projects">Projects</Link>
+                  <Link href="/projects/">Projects</Link>
                 </li>
                 <li className="flex font-bold text-base hover:text-accent-350 cursor-pointer">
                   <Link href="/contact/">Contact Me</Link>
