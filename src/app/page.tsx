@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeadingImage from "@/assets/main-img.webp";
 import Typewriter from "@/components/Typewriter";
+import ViewCounter from "@/components/ViewCounter";
 import { dm_sans } from "@/library/fonts";
 import {
   Facebook_Link,
@@ -42,6 +43,7 @@ const page = () => {
               collaborative developer passionate about writing clean, efficient
               code.
             </p>
+            <ViewCounter />
           </div>
           <div className="flex justify-end items-center max-md:-order-1 w-[35rem] max-md:w-auto max-lg:w-[24rem] max-xl:w-[28rem]">
             <Image
