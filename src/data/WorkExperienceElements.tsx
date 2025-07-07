@@ -1,4 +1,4 @@
-import VerkadaLogo from "@/assets/company/verkada.jpg";
+import KBZBankLogo from "@/assets/company/kbz_bank_logo.jpeg";
 import BaristaChawSuLogo from "@/assets/company/baristachawsu.png";
 import SamsungSDSLogo from "@/assets/company/samsung.jpg";
 import SMCLogo from "@/assets/company/smc.jpg";
@@ -34,33 +34,18 @@ const workExperienceElements: WorkExperienceElement[] = [
   },
   {
     id: 2,
-    title: "Technical Support Engineering Intern",
-    company: "Verkada",
-    location: "San Mateo, California, United States",
+    title: "Software & Technology Intern",
+    company: "KBZ Bank",
+    location: "Yangon, Myanmar",
     year: "2023",
     period: "May 2023 - Aug 2023 · 4 mos",
     type: "Internship",
-    image: VerkadaLogo, // Placeholder for company logo
+    image: KBZBankLogo, // Placeholder for company logo
     description: [
       "• Collaborated with cross-functional teams to troubleshoot 100+ technical issues across MacOS and Windows, strengthening client satisfaction and service reliability.",
       "• Resolved 100+ technical issues across MacOS and Windows systems by troubleshooting hardware, software, and network configurations, ensuring minimal downtime.",
       "• Facilitated user education by creating documentation for CRM, Google Workspace, and Zoom tools, enhancing internal support communication.",
       "• Supported rollout of Duo Multi-Factor Authentication (MFA), helping reduce post-launch security concerns by 14% and boosting user confidence across departments.",
-    ],
-  },
-  {
-    id: 3,
-    title: "Technical Product Manager Intern",
-    company: "Barista Chaw Su",
-    location: "Mandalay, Myanmar",
-    year: "2022",
-    period: "Sep 2022 - Nov 2022 · 3 mos",
-    type: "Internship",
-    image: BaristaChawSuLogo, // Placeholder for company logo
-    description: [
-      "• Designed, developed, and deployed a responsive, mobile-friendly website using Astro and SCSS to host 50+ curated recipe tutorials and brewing guides.",
-      "• Trained 300+ new students on coffee and beverage preparation techniques, using the website as a supplemental learning platform that enabled self-paced learning and broader program reach.",
-      "• Boosted program visibility and enrollment by centralizing educational materials online, increasing web traffic by 60% through word-of-mouth and social media shares.",
     ],
   },
   {
