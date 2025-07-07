@@ -27,7 +27,7 @@ const educationElements: EducationElement[] = [
     institution: "Santa Monica College",
     degree: "Associate of Science - AS",
     field: "Computer Science",
-    period: "Jan 2023 - Aug 2025",
+    period: "Jan 2024 - Aug 2025",
     location: "Santa Monica, CA",
     image: SMC,
   },
