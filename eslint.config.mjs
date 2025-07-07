@@ -13,7 +13,7 @@ const eslintConfig = [
       quotes: "off",
 
       // Relaxed rules for better development experience
-      indent: ["error", 2],
+      indent: "off",
       semi: ["error", "always"],
 
       // Allow snake_case for imported component names
