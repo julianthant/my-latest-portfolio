@@ -2,6 +2,7 @@ import KBZBankLogo from "@/assets/company/kbz_bank_logo.jpeg";
 import BaristaChawSuLogo from "@/assets/company/baristachawsu.png";
 import SamsungSDSLogo from "@/assets/company/samsung.jpg";
 import SMCLogo from "@/assets/company/smc.jpg";
+import StyleNationLogo from "@/assets/company/style-nation.png";
 import { StaticImageData } from "next/image";
 
 interface WorkExperienceElement {
@@ -34,13 +35,43 @@ const workExperienceElements: WorkExperienceElement[] = [
   },
   {
     id: 2,
+    title: "Barista & Social Media Coordinator",
+    company: "Tell Us Cafe",
+    location: "Mandalay, Myanmar",
+    year: "2023",
+    period: "Sep 2023 - Nov 2023 · 3 mos",
+    type: "Full-time",
+    image: BaristaChawSuLogo, // Placeholder for company logo
+    description: [
+      "• Delivered high-quality service to 120+ customers daily by accurately fulfilling orders, operating POS systems, and maintaining a friendly, professional environment.",
+      "• Reduced product waste by 35% through daily restocking, inventory rotation, and proper handling of short-date items during opening and closing procedures.",
+      "• Increased customer engagement by 40% by managing the café’s Facebook page, posting weekly content, updating menus, and responding to messages and reviews.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Digital Marketing & Sales Lead",
+    company: "Style Nation",
+    location: "Mandalay, Myanmar",
+    year: "2023",
+    period: "July 2021 - Nov 2023 · 2 yrs 5 mos",
+    type: "Hybrid",
+    image: StyleNationLogo,
+    description: [
+      "• Designed and launched a responsive website to showcase the car showroom, improving brand credibility and contributing to a 30% increase in online inquiries through linked social media and contact channels.",
+      "• Managed and delegated daily tasks to a 5-person team, coordinating responsibilities across scheduling, showroom upkeep, and customer assistance, leading to a 40% improvement in task completion efficiency.",
+      "• Sold 15+ vehicles in the owner’s absence by handling customer walk-ins, conducting vehicle walkthroughs, and closing sales, while managing a Facebook account with 2,000+ followers to post listings and engage with prospective buyers.",
+    ],
+  },
+  {
+    id: 4,
     title: "Software & Technology Intern",
     company: "KBZ Bank",
     location: "Yangon, Myanmar",
     year: "2023",
     period: "May 2023 - Aug 2023 · 4 mos",
     type: "Internship",
-    image: KBZBankLogo, // Placeholder for company logo
+    image: KBZBankLogo,
     description: [
       "• Collaborated with cross-functional teams to troubleshoot 100+ technical issues across MacOS and Windows, strengthening client satisfaction and service reliability.",
       "• Resolved 100+ technical issues across MacOS and Windows systems by troubleshooting hardware, software, and network configurations, ensuring minimal downtime.",
@@ -49,7 +80,7 @@ const workExperienceElements: WorkExperienceElement[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Operations Management Intern",
     company: "SAMSUNG SDS THAILAND",
     location: "Bangkok City, Thailand",
