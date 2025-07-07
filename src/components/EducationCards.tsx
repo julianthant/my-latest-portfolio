@@ -38,7 +38,7 @@ const EducationCards = () => {
               <p className="mt-1 text-gray-600 dark:text-gray-400 text-sm">
                 {education.field}
               </p>
-              <div className="flex flex-wrap gap-4 mt-1 text-gray-500 dark:text-gray-400 text-sm">
+              <div className="flex flex-wrap gap-1 lg:gap-2 xl:gap-3 mt-1 text-gray-500 dark:text-gray-400 text-sm">
                 <span>{education.period}</span>
                 <span>•</span>
                 <span>{education.location}</span>
