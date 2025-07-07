@@ -1,0 +1,83 @@
+import VerkadaLogo from "@/assets/company/verkada.jpg";
+import BaristaChawSuLogo from "@/assets/company/baristachawsu.png";
+import SamsungSDSLogo from "@/assets/company/samsung.jpg";
+import SMCLogo from "@/assets/company/smc.jpg";
+import { StaticImageData } from "next/image";
+
+interface WorkExperienceElement {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  year: string;
+  period: string;
+  type: string;
+  image: StaticImageData;
+  description: string[];
+}
+
+const workExperienceElements: WorkExperienceElement[] = [
+  {
+    id: 1,
+    title: "SJDV Program Assistant",
+    company: "Santa Monica College",
+    location: "Los Angeles, California, United States",
+    year: "2024",
+    period: "Dec 2024 - Present · 8 mos",
+    type: "Part-time",
+    image: SMCLogo, // Placeholder for company logo
+    description: [
+      "• Created and managed 300+ detailed invoices and expedited 200+ insurance payments to Ed2Go on behalf of injured workers by coordinating directly with claims adjusters, and resolving payment issues.",
+      "• Increased program revenue by $100,000+ by optimizing internal workflows, reducing processing latency, and scaling operational throughput to accommodate higher task volume.",
+      "• Trained and onboarded new team members in all core operations, including Microsoft Teams, Trello workflows, payment systems, and student support procedures, ensuring team readiness.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Technical Support Engineering Intern",
+    company: "Verkada",
+    location: "San Mateo, California, United States",
+    year: "2023",
+    period: "May 2023 - Aug 2023 · 4 mos",
+    type: "Internship",
+    image: VerkadaLogo, // Placeholder for company logo
+    description: [
+      "• Collaborated with cross-functional teams to troubleshoot 100+ technical issues across MacOS and Windows, strengthening client satisfaction and service reliability.",
+      "• Resolved 100+ technical issues across MacOS and Windows systems by troubleshooting hardware, software, and network configurations, ensuring minimal downtime.",
+      "• Facilitated user education by creating documentation for CRM, Google Workspace, and Zoom tools, enhancing internal support communication.",
+      "• Supported rollout of Duo Multi-Factor Authentication (MFA), helping reduce post-launch security concerns by 14% and boosting user confidence across departments.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Technical Product Manager Intern",
+    company: "Barista Chaw Su",
+    location: "Mandalay, Myanmar",
+    year: "2022",
+    period: "Sep 2022 - Nov 2022 · 3 mos",
+    type: "Internship",
+    image: BaristaChawSuLogo, // Placeholder for company logo
+    description: [
+      "• Designed, developed, and deployed a responsive, mobile-friendly website using Astro and SCSS to host 50+ curated recipe tutorials and brewing guides.",
+      "• Trained 300+ new students on coffee and beverage preparation techniques, using the website as a supplemental learning platform that enabled self-paced learning and broader program reach.",
+      "• Boosted program visibility and enrollment by centralizing educational materials online, increasing web traffic by 60% through word-of-mouth and social media shares.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Operations Management Intern",
+    company: "SAMSUNG SDS THAILAND",
+    location: "Bangkok City, Thailand",
+    year: "2022",
+    period: "Mar 2022 - Jun 2022 · 4 mos",
+    type: "Internship",
+    image: SamsungSDSLogo, // Placeholder for company logo
+    description: [
+      "• Improved internal employee satisfaction rating from 3.8 to 4.3 stars (+13%) by assisting in onboarding and supporting staff with Samsung's internal CRM and Slack.",
+      "• Delivered software training sessions for new employees on Slack and Microsoft Teams, streamlining team communication from day one.",
+      "• Designed a new operational scheme for the cloud Storage department.",
+    ],
+  },
+];
+
+export default workExperienceElements;
