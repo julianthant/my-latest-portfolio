@@ -4,21 +4,39 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
   background-color: white;
   color: black;
 }
 
 /* Contact Page */
 
-.mail-icon {
-  transition: transform 0.3s ease-in-out;
+.project-card {
+  background-color: rgb(248 250 252);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  color: rgb(15 23 42);
 }
 
-.scale-animation:hover .mail-icon {
-  transform: scale(1.2);
+.dark .project-card {
+  background-color: rgb(30 41 59);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgb(248 250 252);
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Page */
+
+.mail-icon {
+  transition: transform 0.3s ease-in-out;
 }
 
 .contact-input {
@@ -70,22 +88,28 @@ body {
 
 /* Light mode */
 .custom-timeline::before {
-  background: black !important;
+  background: rgb(203 213 225) !important;
+  width: 1px !important;
 }
 
 /* Dark mode */
 .dark .custom-timeline::before {
-  background: white !important;
+  background: rgb(71 85 105) !important;
+  width: 1px !important;
 }
 
 .custom-timeline-element .vertical-timeline-element-content {
-  background: rgb(241 245 249) !important;
+  background: transparent !important;
   color: #000 !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .dark .custom-timeline-element .vertical-timeline-element-content {
-  background: rgb(30 41 59) !important;
+  background: transparent !important;
   color: #fff !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .vertical-timeline::before {
@@ -96,46 +120,181 @@ body {
 .vertical-timeline-element-icon {
   top: 50% !important;
   transform: translateY(-50%);
-  left: 0.8rem !important;
+  left: calc(0.7rem) !important;
   width: 15px !important;
   height: 15px !important;
-  background-color: black;
-  box-shadow: 0 1px 0.75em rgb(0, 0, 0, 0.8) !important;
+  background-color: white !important;
+  border: 3px solid rgb(203 213 225) !important;
+  box-shadow: none !important;
+  border-radius: 50%;
+  transition: border-color 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.vertical-timeline-element-icon:hover {
+  border-color: rgb(239 68 68) !important;
 }
 
 .dark .vertical-timeline-element-icon {
-  background-color: white !important;
+  background-color: rgb(15 23 42) !important;
+  border: 3px solid rgb(71 85 105) !important;
+}
+
+.dark .vertical-timeline-element-icon:hover {
+  border-color: rgb(239 68 68) !important;
 }
 
 @media only screen and (min-width: 1170px) {
   .vertical-timeline--two-columns .vertical-timeline-element-icon {
     width: 15px !important;
     height: 15px !important;
-    left: calc(50% + 1.4rem) !important;
-    box-shadow: 2px 3px 0.6em rgb(0, 0, 0, 0.7) !important;
+    left: calc(50% + 21px) !important;
+    background-color: white !important;
+    border: 4px solid rgb(203 213 225) !important;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease !important;
+    cursor: pointer !important;
+  }
+
+  .vertical-timeline--two-columns .vertical-timeline-element-icon:hover {
+    border-color: rgb(239 68 68) !important;
+  }
+
+  .dark .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    background-color: rgb(15 23 42) !important;
+    border: 4px solid rgb(71 85 105) !important;
+  }
+
+  .dark .vertical-timeline--two-columns .vertical-timeline-element-icon:hover {
+    border-color: rgb(239 68 68) !important;
   }
 }
 
 @media only screen and (min-width: 1170px) {
   .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
-    top: 50% !important;
+    top: calc(50% + 8px) !important;
   }
 }
 
 .vertical-timeline-element-content-arrow {
-  top: 50% !important;
-  border-right-color: rgb(241 245 249) !important;
+  display: none !important;
 }
 
 .dark .vertical-timeline-element-content-arrow {
-  top: 50% !important;
-  border-right-color: rgb(30 41 59) !important;
+  display: none !important;
+}
+
+/* Fix arrows for left side elements in 2-column layout */
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(odd)
+    .vertical-timeline-element-content-arrow {
+    border-left-color: rgb(248 250 252) !important;
+    border-right-color: transparent !important;
+  }
+
+  .dark
+    .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(odd)
+    .vertical-timeline-element-content-arrow {
+    border-left-color: rgb(30 41 59) !important;
+    border-right-color: transparent !important;
+  }
+
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(even)
+    .vertical-timeline-element-content-arrow {
+    border-right-color: rgb(248 250 252) !important;
+    border-left-color: transparent !important;
+  }
+
+  .dark
+    .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(even)
+    .vertical-timeline-element-content-arrow {
+    border-right-color: rgb(30 41 59) !important;
+    border-left-color: transparent !important;
+  }
 }
 
 .vertical-timeline-element-content {
-  box-shadow: 0 0 0 1px rgb(15 23 42 / 0.1), 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.06) !important;
   background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.project-card {
+  background-color: rgb(248 250 252);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  color: rgb(15 23 42);
+}
+
+.experience-card {
+  background-color: rgb(248 250 252);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  color: rgb(15 23 42);
+}
+
+/* Mobile responsive sizing */
+@media only screen and (max-width: 1170px) {
+  .project-card {
+    padding: 1rem;
+    margin-left: 4.5rem;
+    margin-right: 0.5rem;
+    max-width: calc(100vw - 120px);
+  }
+
+  .experience-card {
+    padding: 1rem;
+    margin-left: 4.5rem;
+    margin-right: 0.5rem;
+    max-width: calc(100vw - 120px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .project-card {
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 0.25rem;
+    max-width: calc(100vw - 100px);
+  }
+
+  .experience-card {
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 0.25rem;
+    max-width: calc(100vw - 100px);
+  }
+}
+
+.dark .project-card {
+  background-color: rgb(30 41 59);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), 0 1px 4px rgba(0, 0, 0, 0.15);
+  color: rgb(248 250 252);
+}
+
+.dark .experience-card {
+  background-color: rgb(30 41 59);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), 0 1px 4px rgba(0, 0, 0, 0.15);
+  color: rgb(248 250 252);
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* Animation */
