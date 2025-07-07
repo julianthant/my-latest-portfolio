@@ -1,20 +1,20 @@
-import { FC } from 'react';
-import { montserrat } from '@/library/fonts';
-import { Mail_Logo, Send_Icon } from '@/components/svgs';
+import { FC } from "react";
+import { montserrat } from "@/library/fonts";
+import { Mail_Logo, Send_Icon } from "@/components/svgs";
 import {
   Facebook_Link,
   Discord_Link,
   Instagram_Link,
   Github_Link,
   Linkedin_Link,
-} from '@/components/SocialIcons';
+} from "@/components/SocialIcons";
 
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
   return (
-    <section className="max-md:pb-14 min-h-screen flex items-center justify-center">
-      <div className="container md:grid-flow-col md:auto-cols-fr md:m-auto grid md:pt-[61px] pt-[4.5rem] px-8">
+    <section className="flex justify-center items-center max-md:pb-14 min-h-screen">
+      <div className="grid md:grid-flow-col md:auto-cols-fr md:m-auto px-8 pt-[4.5rem] md:pt-[61px] container">
         <div
           className={`${montserrat.className} max-md:pb-10 flex flex-col justify-center`}
         >
@@ -22,28 +22,12 @@ const page: FC<pageProps> = ({}) => {
             Let&apos;s chat. <br />
             Tell me about your project.
           </h1>
-          <p className="font-medium py-4 text-2xl">
+          <p className="py-4 font-medium text-2xl">
             Let&apos;s create something together.
           </p>
-          <div className="w-[17.5rem] space-y-8">
-            <div className="flex items-center justify-center border rounded-sm bg-slate-100 dark:bg-slate-300 shadow-sm mt-4 h-16 gap-3  scale-animation cursor-pointer">
-              <div className="border-r pr-4 border-slate-200">
-                <Mail_Logo className="mail-icon dark:fill-slate-800 fill-black" />
-              </div>
-              <div className="pl-2">
-                <h3 className="font-bold text-base text-black dark:text-slate-800">
-                  Mail me at
-                </h3>
-                <a
-                  href="mailto:julianthant@gmail.com"
-                  className="font-light text-sm text-accent-500 hover:text-accent-300"
-                >
-                  julianthant@gmail.com
-                </a>
-              </div>
-            </div>
+          <div className="space-y-8 w-[17.5rem]">
             <ul
-              className="flex items-center justify-between"
+              className="flex justify-between items-center"
               role="list"
               aria-label="social-links"
             >
@@ -55,9 +39,9 @@ const page: FC<pageProps> = ({}) => {
             </ul>
           </div>
         </div>
-        <div className="py-6 px-4 shadow-sm bg-black text-white dark:bg-white dark:text-black rounded-md h-full">
+        <div className="bg-black dark:bg-white shadow-sm px-4 py-6 rounded-md h-full text-white dark:text-black">
           <p className="text-sm">GET IN TOUCH</p>
-          <h1 className="text-[3rem] font-black">Contact Me</h1>
+          <h1 className="font-black text-[3rem]">Contact Me</h1>
           <p className="pb-2 font-bold">Your Name</p>
           <form
             target="_self"
@@ -68,7 +52,7 @@ const page: FC<pageProps> = ({}) => {
             <input
               type="text"
               name="name"
-              className="contact-input rounded-md border focus-within:border-accent-400"
+              className="border focus-within:border-accent-400 rounded-md contact-input"
               placeholder="What is your name?"
               autoComplete="name"
               required
@@ -77,7 +61,7 @@ const page: FC<pageProps> = ({}) => {
             <input
               type="email"
               name="email"
-              className="contact-input rounded-md border focus-within:border-accent-400"
+              className="border focus-within:border-accent-400 rounded-md contact-input"
               placeholder="What is your email?"
               autoComplete="email"
               required
@@ -87,7 +71,7 @@ const page: FC<pageProps> = ({}) => {
               name="message"
               id=""
               rows={5}
-              className="contact-input rounded-md border focus-within:border-accent-400 resize-none"
+              className="border focus-within:border-accent-400 rounded-md resize-none contact-input"
               placeholder="What is your message?"
               required
             ></textarea>
@@ -96,7 +80,7 @@ const page: FC<pageProps> = ({}) => {
               className={`bg-accent-400 hover:bg-accent-300 text-white text-sm pl-6 pr-5 py-2 rounded-full font-bold flex items-center justify-center tracking-wider ${montserrat.className}`}
             >
               SUBMIT
-              <Send_Icon className="w-6 h-6 ml-2" />
+              <Send_Icon className="ml-2 w-6 h-6" />
             </button>
           </form>
         </div>
