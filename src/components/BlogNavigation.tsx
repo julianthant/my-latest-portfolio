@@ -91,7 +91,17 @@ const BlogNavigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Special handling for different sections
+      // For mobile, always scroll to the title with consistent offset
+      const yOffset = -80; // Reduced offset for mobile
+      const y = element.offsetTop + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
+  const scrollToSectionDesktop = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Special handling for different sections on desktop
       if (sectionId === "projects") {
         // Scroll to bottom of page for the last section
         window.scrollTo({
@@ -120,13 +130,7 @@ const BlogNavigation = () => {
   };
 
   const toggleNavState = () => {
-    if (navState === "full") {
-      setNavState("minimized");
-    } else if (navState === "minimized") {
-      setNavState("collapsed");
-    } else {
-      setNavState("full");
-    }
+    setNavState(navState === "collapsed" ? "full" : "collapsed");
   };
 
   return (
@@ -217,7 +221,7 @@ const BlogNavigation = () => {
               {navigationItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => scrollToSectionDesktop(item.id)}
                   className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     navState === "full" ? "w-full" : "w-10 h-10 justify-center"
                   } ${
