@@ -7,6 +7,9 @@ import StyleZ from "@/assets/stylez-store.png";
 import ShoeStore from "@/assets/shoe-website.webp";
 import CodewarsDashboard from "@/components/CodewarsDashboard";
 import LeetcodeDashboard from "@/components/LeetcodeDashboard";
+import WorkExperienceTimeline from "@/components/WorkExperienceTimeline";
+import EducationCards from "@/components/EducationCards";
+import BlogNavigation from "@/components/BlogNavigation";
 
 interface pageProps {}
 
@@ -72,8 +75,11 @@ const tools = [
 const page: FC<pageProps> = ({}) => {
   return (
     <section className="flex flex-col pt-[102px] min-h-screen">
+      {/* Blog Navigation */}
+      <BlogNavigation />
+
       {/* Dashboard Section */}
-      <div className="flex-grow gap-8 grid grid-flow-row">
+      <div id="dashboard" className="flex-grow gap-8 grid grid-flow-row">
         <div className="flex flex-col justify-center gap-10 px-8 container">
           <div className="space-y-2 text-center">
             <h2 className="font-bold text-4xl">Dashboard</h2>
@@ -90,8 +96,13 @@ const page: FC<pageProps> = ({}) => {
         </div>
       </div>
 
+      {/* Divider */}
+      <div className="mx-auto px-8 py-14 w-full max-w-4xl">
+        <hr className="border-gray-200 dark:border-gray-700" />
+      </div>
+
       {/* Skills Section */}
-      <div className="flex-grow gap-8 grid grid-flow-row py-14 max-statsMD:pt-16">
+      <div id="skills" className="flex-grow gap-8 grid grid-flow-row">
         <div className="flex flex-col justify-center gap-10 px-8 container">
           <div className="space-y-2 text-center">
             <h2 className="font-bold text-4xl">Technical Skills</h2>
@@ -113,7 +124,7 @@ const page: FC<pageProps> = ({}) => {
                 {programmingLanguages.map((language, index) => (
                   <span
                     key={index}
-                    className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 text-sm transition-colors"
+                    className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-5 py-1 rounded-full font-bold text-gray-700 dark:text-gray-300 text-sm transition-colors"
                   >
                     {language}
                   </span>
@@ -130,7 +141,7 @@ const page: FC<pageProps> = ({}) => {
                 {frameworks.map((framework, index) => (
                   <span
                     key={index}
-                    className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 text-sm transition-colors"
+                    className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-5 py-1 rounded-full font-bold text-gray-700 dark:text-gray-300 text-sm transition-colors"
                   >
                     {framework}
                   </span>
@@ -147,7 +158,7 @@ const page: FC<pageProps> = ({}) => {
                 {databases.map((database, index) => (
                   <span
                     key={index}
-                    className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 text-sm transition-colors"
+                    className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-5 py-1 rounded-full font-bold text-gray-700 dark:text-gray-300 text-sm transition-colors"
                   >
                     {database}
                   </span>
@@ -164,7 +175,7 @@ const page: FC<pageProps> = ({}) => {
                 {tools.map((tool, index) => (
                   <span
                     key={index}
-                    className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 text-sm transition-colors"
+                    className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-5 py-1 rounded-full font-bold text-gray-700 dark:text-gray-300 text-sm transition-colors"
                   >
                     {tool}
                   </span>
@@ -175,8 +186,57 @@ const page: FC<pageProps> = ({}) => {
         </div>
       </div>
 
+      {/* Divider */}
+      <div className="mx-auto px-8 py-14 w-full max-w-4xl">
+        <hr className="border-gray-200 dark:border-gray-700" />
+      </div>
+
+      {/* Work Experience Section */}
+      <div id="experience" className="flex-grow gap-8 grid grid-flow-row">
+        <div className="flex flex-col justify-center gap-10 px-8 container">
+          <div className="space-y-2 text-center">
+            <h2 className="font-bold text-4xl">Work Experience</h2>
+            <h3
+              className={`text-base text-gray-500 font-medium ${dm_sans.className}`}
+            >
+              Professional Development Journey
+            </h3>
+          </div>
+
+          <div className="flex flex-col justify-center items-center max-w-6xl">
+            <WorkExperienceTimeline />
+          </div>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="mx-auto px-8 py-14 w-full max-w-4xl">
+        <hr className="border-gray-200 dark:border-gray-700" />
+      </div>
+
+      {/* Education Section */}
+      <div id="education" className="flex-grow gap-8 grid grid-flow-row">
+        <div className="flex flex-col justify-center gap-10 px-8 container">
+          <div className="space-y-2 text-center">
+            <h2 className="font-bold text-4xl">Education</h2>
+            <h3
+              className={`text-base text-gray-500 font-medium ${dm_sans.className}`}
+            >
+              Academic Background
+            </h3>
+          </div>
+
+          <EducationCards />
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="mx-auto px-8 py-14 w-full max-w-4xl">
+        <hr className="border-gray-200 dark:border-gray-700" />
+      </div>
+
       {/* Featured Projects Section */}
-      <div className="flex-grow gap-8 grid grid-flow-row">
+      <div id="projects" className="flex-grow gap-8 grid grid-flow-row">
         <div className="flex flex-col justify-center gap-10 px-8 container">
           <div className="space-y-2 text-center">
             <h2 className="font-bold text-4xl">Featured Projects</h2>
@@ -203,10 +263,26 @@ const page: FC<pageProps> = ({}) => {
             />
           </div>
 
-          <div className="flex justify-end pb-12">
-            <Link href="/blog/projects">
-              <button className="hover:opacity-60 shadow-md px-5 py-2 rounded-lg font-bold text-white bg-accent-400">
-                View All Projects
+          <div className="flex justify-center sm:justify-end pb-12">
+            <Link href="/projects/">
+              <button className="group relative bg-transparent px-4 py-2 border-2 border-gray-300 hover:border-accent-400 dark:border-gray-600 dark:hover:border-accent-400 rounded-lg font-medium text-gray-700 dark:text-gray-300 text-sm transition-all duration-300 ease-out hover:text-accent-400 dark:hover:text-accent-400">
+                <span className="flex items-center gap-2">
+                  View All Projects
+                  <svg
+                    className="w-3 h-3 transition-transform group-hover:translate-x-1 duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+                <div className="bottom-0 left-0 absolute w-0 group-hover:w-full h-0.5 transition-all duration-300 ease-out bg-accent-400"></div>
               </button>
             </Link>
           </div>
